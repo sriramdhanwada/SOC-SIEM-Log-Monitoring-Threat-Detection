@@ -8,6 +8,7 @@ The objective was to understand how processes are created, how parent and child 
 ## Objectives
 - Understand Sysmon and its role in endpoint monitoring.
 - Analyze Sysmon Event ID 1 (Process Creation).
+- Analyze Windows Security Event ID 4688 (Process Creation).
 - Investigate process names and executable paths.
 - Examine parent-child process relationships.
 - Analyze PowerShell execution activity.
@@ -36,13 +37,16 @@ Analyzed Sysmon Event ID 1 to investigate:
 - User account
 - Process creation timestamp
 
-### 3. PowerShell Investigation
+### 3. Windows Security Process Creation Monitoring
+Analyzed Windows Security Event ID 4688 to investigate process creation activity, including the newly created process and its parent process.
+
+### 4. PowerShell Investigation
 Examined PowerShell execution events and reviewed command-line information to understand process behavior.
 
-### 4. Parent-Child Process Analysis
+### 5. Parent-Child Process Analysis
 Investigated relationships between parent and child processes to understand process execution chains and identify activity requiring further investigation.
 
-### 5. Process Activity Analysis in Splunk
+### 6. Process Activity Analysis in Splunk
 Used Splunk searches to filter, examine, and correlate Sysmon process creation events.
 
 ## Investigation Findings
@@ -51,6 +55,7 @@ Used Splunk searches to filter, examine, and correlate Sysmon process creation e
 - Examined parent-child process relationships.
 - Investigated PowerShell command-line activity.
 - Practiced identifying process behavior that may require additional investigation.
+- Analyzed Windows Security Event ID 4688 for process creation activity.
 
 ## Skills Demonstrated
 - Endpoint Monitoring
@@ -60,6 +65,7 @@ Used Splunk searches to filter, examine, and correlate Sysmon process creation e
 - Parent-Child Process Analysis
 - Splunk SPL
 - Security Event Investigation
+- Windows Security Event Log Analysis
 
 ## Conclusion
 This exercise provided practical experience in Windows endpoint monitoring using Sysmon. It demonstrated how process creation events and command-line information can help SOC analysts investigate suspicious endpoint activity.
